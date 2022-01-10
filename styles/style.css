@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root{
+  --clr-black: #333;
+  --clr-primary-white: #FFFFFF;
+  --clr-bg-green: rgba(131,148,140, 0.6);
+  --clr-puzzle-green: rgba(131,148,140, 0.4);
+  --clr-puzzle-hover: rgba(131,148,140, 0.3);
+   /* --font-family: 'Inter',sans-serif;*/
+    --font-size: 1rem;
+    --font-regular: 400;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --color-primary: rgb(255 211 56);
+    --color-secondary: rgb(240 246 255);
+    --color-from: rgb(168 85 207);
+    --color-to: rgb(55 88 249);
+    --container-width: 72rem;
+    --border-radius: .5rem;
+    --box-shadow: 0 2px 14px 2px rgb(99 93 255 / 30%);
+    --section-spacing: 1.5rem;
+    --line-height: 1.25;
+    --line-height-text: 1.75;
+    --color-primary-light: rgba(230, 229, 255, 0.4)
+}
+
+/*  Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--clr-primary-white);
+  color: var(--clr-black);
+  height: 100vh;
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.mainpage-bg{
+  display: flex;
+  flex: 47%;
+  height: 100vh;
+  background-image: url("../assets/img/main-bg.png");
+  justify-content: center;
+  align-items: center;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  flex: 53%;
+  height: 100vh;
+  width: 23rem;
+  position: relative;
+  
+  /*background-color:burlywood;*/
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+.cta__form__input {
+    margin-bottom: unset;
+    margin-right: 1rem;
+    min-width: 25rem;
+}
+}
+
+.cta__form__input {
+    border: none;
+    background-color: var(--color-primary-light);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    min-width: 22rem;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+:root {
+    --section-spacing: 2.5rem;
+}
+}
+
+.name-surname {
+    display: flex;
+    width: 23rem;
+}
+
+.name-surname input {
+  border: none;
+  background-color: var(--color-primary-light);
+  border-radius: var(--border-radius);
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 10.8rem;
+  justify-content: space-around;
+  margin-right: .5rem;
+}
+
+.pasw {
+  line-height: .8rem;
+  font-size: .7rem;
+  text-align: left;
+}
+
+.button--primary {
+  background: linear-gradient(
+90deg, #9467d6 0, #8254c7 100%);
+border: 1px solid rgba(99,93,255,.2);
+box-shadow: 0 2px 14px 2px rgb(99 93 255 / 20%);
+  color: #fff;
+}
+
+.button {
+  --button-height: 42px;
+  min-height: var(--button-height);
+  background-color: transparent;
+  cursor: pointer;
+  outline: 0;
+  border-radius: var(--border-radius);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--letter-spacing);
+  padding: 0.8rem 3rem;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.signup{
+ /* display: flex;
+  align-self: flex-end;*/
+  margin-top: .4rem;
+  margin-bottom: 1rem;
+}
+
+div {
+ /* width: 22.7rem;*/
+}
+
+.sign-in span{
+  color:rgba(37, 44, 40, 0.6);
+}
+
+.sign-in a {
+  color:#8254c7;
+  font-weight: bold;
+}
