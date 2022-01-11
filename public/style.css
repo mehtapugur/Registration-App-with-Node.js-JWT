@@ -66,6 +66,15 @@ body {
   align-items: center;
 }
 
+#title {  
+  color:rgba(37, 44, 40, 0.6);
+ /* text-align: left;
+  align-items: flex-start;
+  align-self: flex-start;
+  margin-left: 11.6rem; */
+  margin-bottom: 1.15rem;
+} 
+
 @media (min-width: 768px) {
 .cta__form__input {
     margin-bottom: unset;
