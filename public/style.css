@@ -78,7 +78,7 @@ body {
 @media (min-width: 768px) {
 .cta__form__input {
     margin-bottom: unset;
-    margin-right: 1rem;
+    /*margin-right: 1rem;*/
     min-width: 25rem;
 }
 }
@@ -109,7 +109,7 @@ button, input, optgroup, select, textarea {
 
 .name-surname {
     display: flex;
-    width: 23rem;
+    width: 22rem;
 }
 
 .name-surname input {
