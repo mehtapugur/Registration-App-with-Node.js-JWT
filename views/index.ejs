@@ -1,79 +1,33 @@
 <%- include("partials/_header"); %>
 
-    <%- include("partials/_navigation"); %>
-
-        <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel"
-            data-pause="hover" data-interval="false">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item">
-                    <div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
-                        <div class="dtab">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 text-right">
-                                        <div class="big-tagline">
-                                            <h2><strong>Kocaeli </strong> Üniversitesi</h2>
-                                            <p class="lead">Araştırma Problemleri ve Bitirme Projesi derslerine ait
-                                                dokümanları yükleme alanı </p>
-                                            <a href="/login" class="hover-btn-new"><span>Login</span></a>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="/register" class="hover-btn-new"><span>Register</span></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end row -->
-                            </div><!-- end container -->
-                        </div>
-                    </div><!-- end section -->
-                </div>
-                <div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
-                    <div class="dtab">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 text-center">
-                                    <div class="big-tagline">
-                                        <h2><strong>Kocaeli </strong> Üniversitesi</h2>
-                                        <p class="lead">Araştırma Problemleri ve Bitirme Projesi derslerine ait
-                                            dokümanları yükleme alanı </p>
-                                    </div>
-                                </div>
-                            </div><!-- end row -->
-                        </div><!-- end container -->
-                    </div>
-                </div><!-- end section -->
-            </div>
-
+    <div class="mainpage-bg"></div>
+    <div class="form-field">
+        <p>REGISTRATION FORM</p>
+        <!--
+      <input type="name" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
+        placeholder="👋 Name" required="">
+      <input type="surname" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
+        placeholder="👋 Surname" required="">
+      -->
+        <div class="name-surname">
+            <input type="name" name="MERGE0" autocapitalize="off" autocorrect="off" placeholder="First Name"
+                required="" />
+            <input type="username" name="MERGE0" autocapitalize="off" autocorrect="off" placeholder="Last Name"
+                required="" />
         </div>
+        <input type="email" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
+            placeholder="👋 Email Address" required="">
+        <input type="username" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
+            placeholder="Create username" required="">
+        <input type="password" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
+            placeholder="Create password" required="">
+        <!--<div class="pasw">Password must be at least 8 characters long.</div> -->
+        <div class="signup">
+            <button type="button" class="button button--primary" aria-label="Sign Up">Sign Up</button>
         </div>
-
-        <div class="section cl">
-            <div class="container">
-                <div class="row text-left stat-wrap">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                                class="flaticon-study"></i></span>
-                        <p class="stat_count">12000</p>
-                        <h3>Students</h3>
-                    </div><!-- end col -->
-
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                                class="flaticon-online"></i></span>
-                        <p class="stat_count">240</p>
-                        <h3>Courses</h3>
-                    </div><!-- end col -->
-
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                                class="flaticon-years"></i></span>
-                        <p class="stat_count">55</p>
-                        <h3>Years Completed</h3>
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </div><!-- end section -->
-
-        <%- include("partials/_footer"); %>
+        <div class="sign-in">
+            <span>Already a member?</span>&nbsp
+            <a href="#">Sign In</a>
+        </div>
+    </div>
+    <%- include("partials/_footer"); %>
