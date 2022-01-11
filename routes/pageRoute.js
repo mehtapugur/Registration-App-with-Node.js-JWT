@@ -11,6 +11,4 @@ router
   .get(redirectMiddleware, pageController.getRegisterPage);
 router.route("/login").get(redirectMiddleware, pageController.getLoginPage);
 
-
-
 module.exports = router;

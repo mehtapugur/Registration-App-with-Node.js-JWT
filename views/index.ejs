@@ -1,7 +1,5 @@
 <%- include("partials/_header"); %>
-
-    <div class="mainpage-bg"></div>
-    <div class="form-field">
+    <form class="form-field" method="post" action="users/signup">
         <h4 id="title">Registration Form</h4>
         <!--
       <input type="name" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
@@ -10,24 +8,24 @@
         placeholder="👋 Surname" required="">
       -->
         <div class="name-surname">
-            <input type="name" name="MERGE0" autocapitalize="off" autocorrect="off" placeholder="First Name"
+            <input type="name" name="name" id="name" autocapitalize="off" autocorrect="off" placeholder="First Name"
                 required="" />
-            <input type="username" name="MERGE0" autocapitalize="off" autocorrect="off" placeholder="Last Name"
-                required="" />
+            <input type="username" name="surname" id="surname" autocapitalize="off" autocorrect="off"
+                placeholder="Last Name" required="" />
         </div>
-        <input type="email" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
+        <input type="email" name="email" id="email" autocapitalize="off" autocorrect="off" class="cta__form__input"
             placeholder="👋 Email Address" required="">
-        <input type="username" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
-            placeholder="Create username" required="">
-        <input type="password" name="MERGE0" autocapitalize="off" autocorrect="off" class="cta__form__input"
-            placeholder="Create password" required="">
+        <input type="username" name="username" id="username" autocapitalize="off" autocorrect="off"
+            class="cta__form__input" placeholder="Create username" required="">
+        <input type="password" name="password" id="password" autocapitalize="off" autocorrect="off"
+            class="cta__form__input" placeholder="Create password" required="">
         <!--<div class="pasw">Password must be at least 8 characters long.</div> -->
         <div class="signup">
-            <button type="button" class="button button--primary" aria-label="Sign Up">Sign Up</button>
+            <button type="submit" id="submit" class="button button--primary" aria-label="Sign Up">Sign Up</button>
         </div>
         <div class="sign-in">
             <span>Already a member?</span>&nbsp
             <a href="#">Sign In</a>
         </div>
-    </div>
+    </form>
     <%- include("partials/_footer"); %>

@@ -74,6 +74,7 @@ app.use(
 //   userIN = req.session.userID;
 //   next();
 // });
+
 app.use("/", pageRoute);
 // app.use("/lessons", lessonRoute);
 // app.use("/categories", categoryRoute);

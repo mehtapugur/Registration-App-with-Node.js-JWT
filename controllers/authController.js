@@ -16,14 +16,14 @@ exports.createUser = async (req, res) => {
 
 exports.loginUser = (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
 
-    User.findOne({ email }, (err, user) => {
+    User.findOne({ username }, (err, user) => {
       if (user) {
         if (password === user.password) {
           req.session.userID = user._id;
-          res.status(200).redirect("/users/files");
-          //res.status(200).send("giriş yapıldı");
+          //res.status(200).redirect("/users/files");
+          res.status(200).send("giriş yapıldı");
         }
       }
     });
