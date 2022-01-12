@@ -42,9 +42,11 @@ exports.logoutUser = (req, res) => {
   });
 };
 
-exports.getHomePage = (req, res) => {
+exports.getHomePage = async (req, res) => {
+  const users = await User.find();
   res.status(200).render("home", {
     page_name: "home",
+    users,
   });
 };
 
