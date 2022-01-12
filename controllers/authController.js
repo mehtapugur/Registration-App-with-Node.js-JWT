@@ -35,7 +35,6 @@ exports.loginUser = (req, res) => {
   }
 };
 
-/*
 exports.logoutUser = (req, res) => {
   req.session.destroy(() => {
     res.redirect("/");
@@ -90,7 +89,6 @@ exports.getAllFiles = async (req, res) => {
   }
 };
 
-*/
 /*
 
 exports.createPdf = async (req, res) => {
