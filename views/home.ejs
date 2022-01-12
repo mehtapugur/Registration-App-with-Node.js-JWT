@@ -6,11 +6,17 @@
     <div class="users-list">
       <div class="members">
         <u>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
-          <li>...</li>
+          <% for(let i=0; i< users.length; i++) { %>
+            <li>
+              <%= users[i].name %>
+            </li>
+            <li>
+              <%= users[i].name %>
+            </li>
+            <li>
+              <%= users[i].name %>
+            </li>
+            <% } %>
         </u>
       </div>
     </div>
