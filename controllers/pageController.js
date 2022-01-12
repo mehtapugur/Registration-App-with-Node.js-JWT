@@ -4,12 +4,13 @@ exports.getIndexPage = (req, res) => {
     page_name: "index",
   });
 };
-
+/*
 exports.getHomePage = (req, res) => {
   res.status(200).render("home", {
     page_name: "home",
   });
 };
+*/
 
 exports.getAboutPage = (req, res) => {
   res.status(200).render("about", {

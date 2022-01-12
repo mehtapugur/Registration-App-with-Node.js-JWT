@@ -41,6 +41,12 @@ exports.logoutUser = (req, res) => {
   });
 };
 
+exports.getHomePage = (req, res) => {
+  res.status(200).render("home", {
+    page_name: "home",
+  });
+};
+
 exports.getDocumentsPage = async (req, res) => {
   const user = await User.findOne({ _id: req.session.userID });
   res.status(200).render("documents", {
