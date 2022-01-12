@@ -4,21 +4,22 @@
       <h3>Our Members</h3>
     </span>
     <div class="users-list">
-      <div class="members">
-        <u>
-          <% for(let i=0; i< users.length; i++) { %>
-            <li>
-              <%= users[i].name %>
+      <% for(let i=0; i< users.length; i++) { %>
+        <div class="members">
+          <span>
+            <%= i+1 %>.
+          </span>
+          <u>
+            <li>Fullname: &nbsp<%= users[i].name %>
+                <%= users[i].surname %>
             </li>
-            <li>
-              <%= users[i].name %>
+            <li>Username: &nbsp<%= users[i].username %>
             </li>
-            <li>
-              <%= users[i].name %>
+            <li>Email: &nbsp<%= users[i].email %>
             </li>
-            <% } %>
-        </u>
-      </div>
+          </u>
+        </div>
+        <% } %>
     </div>
   </div>
   <%- include("partials/_footer"); %>
