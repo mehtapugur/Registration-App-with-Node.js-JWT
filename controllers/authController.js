@@ -23,7 +23,8 @@ exports.loginUser = (req, res) => {
         if (password === user.password) {
           req.session.userID = user._id;
           //res.status(200).redirect("/users/files");
-          res.status(200).send("giriş yapıldı");
+          res.status(200).redirect("/users/home");
+          //res.status(200).send("giriş yapıldı");
         }
       }
     });
