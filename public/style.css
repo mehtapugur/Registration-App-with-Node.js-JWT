@@ -179,7 +179,7 @@ textarea {
 }
 
 .mark h3 {
-  color: rgba(37, 44, 40, 0.7);
+  color: rgba(37, 44, 40, 0.6);
 }
 
 @media (min-width: 768px) {
@@ -201,16 +201,18 @@ textarea {
   line-height: var(--line-height);
 }
 
+/*
 .mark::before {
   content: "";
   display: block;
   position: absolute;
-  background: #bc9ceb; /* var(--color-primary);*/
-  width: 100%;
+  background: #c1a5eb; 
+  width: 97.5%;
   height: 0.3em;
   z-index: -1;
-  right: -0.15rem;
+
   bottom: 0.85rem;
+  left: 0.29rem;
   /* content: "";
   display: block;
   position: absolute;
@@ -219,8 +221,8 @@ textarea {
   height: 0.3em;
   z-index: -1;
   right: -0.15rem;
-  bottom: 0.15rem;*/
-}
+  bottom: 0.15rem;
+} */
 
 .users-container {
   width: 60%;
@@ -228,11 +230,33 @@ textarea {
 
 .users-list {
   margin-top: 0.6rem;
+  /* background-color: var(--color-primary-light);
+  border-radius: var(--border-radius); */
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.65rem;
+  padding: 1rem; /*0.5rem .8rem;*/
   background-color: var(--color-primary-light);
   border-radius: var(--border-radius);
+}
+
+.members span {
+  display: inline-block;
+  color: rgba(37, 44, 40, 0.45);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-right: 1.2rem;
+  line-height: 4.3rem; /* bunu hesapla ve ayarla */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .members u {
   text-decoration: none;
   list-style: none;
+  color: rgba(37, 44, 40, 0.6);
 }
