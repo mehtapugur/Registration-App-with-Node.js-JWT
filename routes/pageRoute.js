@@ -4,15 +4,12 @@ const pageController = require("../controllers/pageController");
 const redirectMiddleware = require("../middlewares/redirectMiddleware");
 const router = express.Router();
 
-router.route("/").get(pageController.getIndexPage);
+//router.route("/").get(pageController.getIndexPage);
 //router.route("/about").get(pageController.getAboutPage);
-router
-  .route("/register")
-  .get(redirectMiddleware, pageController.getRegisterPage);
+router.route("/").get(redirectMiddleware, pageController.getRegisterPage);
 router.route("/login").get(redirectMiddleware, pageController.getLoginPage);
 
 module.exports = router;
 
-
 //tasarım için yaptım
-router.route("/home").get(pageController.getHomePage);
+//router.route("/home").get(pageController.getHomePage);
