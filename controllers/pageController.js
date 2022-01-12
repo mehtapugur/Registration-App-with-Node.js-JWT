@@ -5,6 +5,12 @@ exports.getIndexPage = (req, res) => {
   });
 };
 
+exports.getHomePage = (req, res) => {
+  res.status(200).render("home", {
+    page_name: "home",
+  });
+};
+
 exports.getAboutPage = (req, res) => {
   res.status(200).render("about", {
     page_name: "about",

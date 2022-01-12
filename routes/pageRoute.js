@@ -12,3 +12,7 @@ router
 router.route("/login").get(redirectMiddleware, pageController.getLoginPage);
 
 module.exports = router;
+
+
+//tasarım için yaptım
+router.route("/home").get(pageController.getHomePage);

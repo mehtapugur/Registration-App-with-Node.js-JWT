@@ -49,6 +49,14 @@ exports.getDocumentsPage = async (req, res) => {
   });
 };
 
+exports.getUsersPage = async (req, res) => {
+  const user = await User.findOne({ _id: req.session.userID });
+  res.status(200).render("users", {
+    page_name: "users",
+    user,
+  });
+};
+
 exports.getFilesPage = async (req, res) => {
   const user = await User.findOne({ _id: req.session.userID });
   res.status(200).render("files", {
