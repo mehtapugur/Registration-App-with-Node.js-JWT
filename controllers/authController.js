@@ -29,13 +29,21 @@ exports.loginUser = (req, res) => {
             const token = jwt.sign(payload, req.app.get("api_secret_key"), {
               expiresIn: 60 /*dk*/,
             });
-            res.json({
+            /* res.json({
               status: true,
               username,
               password,
               token,
-            });
-            //res.status(200).redirect("/users/home");
+            }); */
+            console.log(`
+            json({
+              status: true,
+              ${username},
+              ${password},
+              ${token},
+            })
+            `);
+            res.status(200).redirect("/users/home");
             //res.status(200).redirect("/users/files");
             //res.status(200).send("giriş yapıldı");
           } else {
