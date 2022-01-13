@@ -24,7 +24,7 @@ exports.loginUser = (req, res) => {
       if (user) {
         bcrypt.compare(password, user.password, (err, same) => {
           if (same) {
-            //req.session.userID = user._id;
+            req.session.userID = user._id;
             const payload = { username, password };
             const token = jwt.sign(payload, req.app.get("api_secret_key"), {
               expiresIn: 60 /*dk*/,
