@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const bcrypt = require("bcrypt");
 //const File = require("../models/File");
 //const Pdf = require("../models/Pdf");
 
@@ -20,12 +21,14 @@ exports.loginUser = (req, res) => {
 
     User.findOne({ username }, (err, user) => {
       if (user) {
-        if (password === user.password) {
-          req.session.userID = user._id;
-          //res.status(200).redirect("/users/files");
-          res.status(200).redirect("/users/home");
-          //res.status(200).send("giriş yapıldı");
-        }
+        bcrypt.compare(password, user.password, (err, same) => {
+          if (same) {
+            req.session.userID = user._id;
+            res.status(200).redirect("/users/home");
+            //res.status(200).redirect("/users/files");
+            //res.status(200).send("giriş yapıldı");
+          }
+        });
       }
     });
   } catch (error) {
