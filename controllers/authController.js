@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 //const File = require("../models/File");
 //const Pdf = require("../models/Pdf");
 
@@ -24,9 +25,29 @@ exports.loginUser = (req, res) => {
         bcrypt.compare(password, user.password, (err, same) => {
           if (same) {
             req.session.userID = user._id;
+            const payload = { username, password };
+            const token = jwt.sign(payload, req.app.get("api_secret_key"), {
+              expiresIn: 60 /*dk*/,
+            });
+            /* res.json({
+              status: true,
+              username,
+              password,
+              token,
+            }); */
+            console.log(`
+            json({
+              status: true,
+              ${username},
+              ${password},
+              ${token},
+            })
+            `);
             res.status(200).redirect("/users/home");
             //res.status(200).redirect("/users/files");
             //res.status(200).send("giriş yapıldı");
+          } else {
+            res.send("Kullanıcı adı veya şifre yanlış...");
           }
         });
       }

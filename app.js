@@ -48,6 +48,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(`${__dirname}/public`));
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.set("api_secret_key", require("./config").api_secret_key);
 app.use(
   session({
     secret: "api_secret_key",
