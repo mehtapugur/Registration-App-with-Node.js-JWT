@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.route("/signup").post(authController.createUser);
 router.route("/login").post(authController.loginUser);
-//router.route("/logout").get(authController.logoutUser);
+router.route("/logout").get(authController.logoutUser);
 router.route("/home").get(authMiddleware, authController.getHomePage);
 //router.route("/documents").get(authMiddleware, authController.getDocumentsPage);
 //router.route("/files").get(authMiddleware, authController.getAllFiles);
