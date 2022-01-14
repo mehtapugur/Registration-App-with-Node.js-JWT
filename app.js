@@ -1,6 +1,7 @@
 // Gerekli modüller require edilir
 const express = require("express");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 // const fileUpload = require("express-fileupload");
 const session = require("express-session");
@@ -49,9 +50,15 @@ app.use(express.static(`${__dirname}/public`));
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.set("api_secret_key", require("./config").api_secret_key);
+app.use(cookieParser());
+
 app.use(
   session({
     secret: "api_secret_key",
+    cookie: {
+      maxAge: 6000000,
+      httpOnly: true,
+    },
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({

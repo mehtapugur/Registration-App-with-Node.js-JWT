@@ -1,28 +1,57 @@
 <%- include("partials/_header"); %>
-  <button type="button" class="button button--primary" aria-label="Logout">
-    <a href="/users/logout">logout</a>
-  </button>
-  <div class="users-container">
-    <span class="mark">
-      <h3>Our Members</h3>
-    </span>
-    <div class="users-list">
-      <% for(let i=0; i< users.length; i++) { %>
-        <div class="members">
-          <span>
-            <%= i+1 %>.
-          </span>
-          <u>
-            <li>Fullname: &nbsp<%= users[i].name %>
-                <%= users[i].surname %>
-            </li>
-            <li>Username: &nbsp<%= users[i].username %>
-            </li>
-            <li>Email: &nbsp<%= users[i].email %>
-            </li>
-          </u>
+  <div class="home-container">
+    <button type="button" class="button button--primary" aria-label="Logout">
+      <a href="/users/logout">logout</a>
+    </button>
+    <div class="container">
+      <div class="row row--top-40">
+        <div class="col-md-12">
+          <h2 class="row__title">Members (<%= users.length %>)</h2>
         </div>
-        <% } %>
+      </div>
+      <div class="row row--top-20">
+        <div class="col-md-12">
+          <div class="table-container">
+            <table class="table">
+              <thead class="table__thead">
+                <tr>
+                  <th class="table__th">Name</th>
+                  <th class="table__th">Username</th>
+                  <th class="table__th">Email</th>
+                </tr>
+              </thead>
+              <tbody class="table__tbody">
+                <% for(let i=0; i < users.length; i++) { %>
+                  <tr class="table-row table-row--chris">
+                    <td class="table-row__td">
+                      <div class="table-row__info">
+                        <p class="table-row__name">
+                          <%= users[i].name %>
+                            <%= users[i].surname %>
+                        </p>
+                      </div>
+                    </td>
+                    <td data-column="Username" class="table-row__td">
+                      <div class="">
+                        <p class="table-row__policy">
+                          <%= users[i].username %>
+                        </p>
+                      </div>
+                    </td>
+                    <td data-column="Email" class="table-row__td">
+                      <p class="table-row__p-status status--green status">
+                        <%= users[i].email %>
+                      </p>
+                    </td>
+                    </td>
+                  </tr>
+                  <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
   <%- include("partials/_footer"); %>

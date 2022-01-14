@@ -24,17 +24,28 @@ exports.loginUser = (req, res) => {
       if (user) {
         bcrypt.compare(password, user.password, (err, same) => {
           if (same) {
+            //req.session.userID = user._id;
+            //const payload = { username, password };
+
+            const token = jwt.sign(
+              { id: user._id, browserInfo: req.headers["user-agent"] },
+              req.app.get("api_secret_key"),
+              {
+                expiresIn: "60m" /*dk*/,
+              }
+            );
+
+            res.cookie("token", token, { httpOnly: true });
+
             req.session.userID = user._id;
-            const payload = { username, password };
-            const token = jwt.sign(payload, req.app.get("api_secret_key"), {
-              expiresIn: 60 /*dk*/,
-            });
+            req.session.browserInfo = req.headers["user-agent"];
             /* res.json({
               status: true,
               username,
               password,
               token,
             }); */
+            /*
             console.log(`
             json({
               status: true,
@@ -42,14 +53,16 @@ exports.loginUser = (req, res) => {
               ${password},
               ${token},
             })
-            `);
+            `); */
             res.status(200).redirect("/users/home");
             //res.status(200).redirect("/users/files");
             //res.status(200).send("giriş yapıldı");
           } else {
-            res.send("Kullanıcı adı veya şifre yanlış...");
+            res.send("Şifre yanlış...");
           }
         });
+      } else {
+        res.send("Bu kullanıcı isminde bir kayıt yok..");
       }
     });
   } catch (error) {
