@@ -12,7 +12,12 @@ exports.createUser = async (req, res) => {
     if (user) res.status(201).redirect("/login");
   } catch (error) {
     res.redirect("/");
-    console.log("Kayıt olunamadı");
+    console.log(
+      json({
+        status: "fail",
+        error,
+      })
+    );
   }
 };
 
