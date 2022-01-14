@@ -5,14 +5,14 @@ const jwt = require("jsonwebtoken");
 //const Pdf = require("../models/Pdf");
 
 exports.createUser = async (req, res) => {
-  const user = await User.create(req.body);
+  //console.log(req.body.username);
+  //const users = await User.find();
   try {
-    res.status(201).redirect("/login");
-  } catch {
-    res.status(400).json({
-      status: "fail",
-      error,
-    });
+    const user = await User.create(req.body);
+    if (user) res.status(201).redirect("/login");
+  } catch (error) {
+    res.redirect("/");
+    console.log("Kayıt olunamadı");
   }
 };
 
