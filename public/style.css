@@ -48,6 +48,8 @@ body {
   flex: 47%;
   height: 100vh;
   background-image: url("images/main-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   justify-content: center;
   align-items: center;
 }
