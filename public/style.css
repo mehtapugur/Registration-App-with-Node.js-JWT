@@ -59,7 +59,7 @@ body {
   flex-direction: column;
   flex: 53%;
   height: 100vh;
-  width: 23rem;
+  width: 28rem;
   position: relative;
 
   /*background-color:burlywood;*/
@@ -73,7 +73,7 @@ body {
   align-items: flex-start;
   align-self: flex-start;
   margin-left: 11.6rem; */
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -90,7 +90,7 @@ body {
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
   padding: 1rem;
-  min-width: 22rem;
+  min-width: 25rem;
 }
 button,
 input {
@@ -103,7 +103,7 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
-  line-height: 1.15;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -115,7 +115,7 @@ textarea {
 
 .name-surname {
   display: flex;
-  width: 22rem;
+  width: 25rem;
 }
 
 .name-surname input {
@@ -123,9 +123,9 @@ textarea {
   background-color: var(--color-primary-light);
   border-radius: var(--border-radius);
   justify-content: space-around;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
   padding: 1rem;
-  width: 10.8rem;
+  width: 12.25rem;
   justify-content: space-around;
   margin-right: 0.5rem;
 }
@@ -144,7 +144,7 @@ textarea {
 }
 
 .button {
-  --button-height: 42px;
+  --button-height: 45px;
   min-height: var(--button-height);
   background-color: transparent;
   cursor: pointer;
@@ -162,8 +162,8 @@ textarea {
 .signup {
   /* display: flex;
   align-self: flex-end;*/
-  margin-top: 0.4rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.1rem;
 }
 
 .sign-in span {
