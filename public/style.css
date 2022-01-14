@@ -153,10 +153,19 @@ textarea {
   font-weight: var(--font-semibold);
   letter-spacing: var(--letter-spacing);
   padding: 0.8rem 3rem;
-  transition: var(--transition);
+  transition: all 0.2s ease-in-out; /* var(--transition); */
   display: inline-flex;
   align-items: center;
   text-transform: capitalize;
+}
+
+.button:hover {
+  transform: scale(1.08);
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .signup {
