@@ -50,9 +50,13 @@ CSS and Bootstrap were used for styling.
 | --- |
 | <img src="https://user-images.githubusercontent.com/24686636/149600582-1ed1c14b-edf4-4c71-8730-a736feed40ab.png"> |
 
+| Home | 
+| --- |
+| <img src="https://user-images.githubusercontent.com/24686636/149600950-9605faad-c26e-4a54-ad9b-b2d3a37e1c0e.png"> |
+
 | Mongo Users | Mongo Session | 
 | --- | --- |
-| <img src="https://user-images.githubusercontent.com/24686636/149600682-e72ada7d-a99c-4949-9f51-3df75573a47a.png"> | <img src="https://user-images.githubusercontent.com/24686636/149600686-75539306-bd10-4dc2-9b2a-e932d24c560a.png"> |
+| <img src="https://user-images.githubusercontent.com/24686636/149600983-83b3f4c7-1eab-4721-91ed-7ab715a4b72c.png"> | <img src="https://user-images.githubusercontent.com/24686636/149600686-75539306-bd10-4dc2-9b2a-e932d24c560a.png"> |
 
 | Token | 
 | --- |
