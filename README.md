@@ -42,6 +42,10 @@ CSS and Bootstrap were used for styling.
 | --- | --- |
 | <img src="https://user-images.githubusercontent.com/24686636/149600366-5a7828e7-58ef-4125-94fd-ee754cfa6ef6.png"> | <img src="https://user-images.githubusercontent.com/24686636/149600374-165951d6-c1d4-4068-8235-e28650097575.png"> |
 
+| Register |
+| --- |
+| <img src="https://user-images.githubusercontent.com/24686636/149600366-5a7828e7-58ef-4125-94fd-ee754cfa6ef6.png"> |
+
 ## :computer: Setup
   
   - To run the project, Git must be installed on your computer (or you can download zip file). You must install MongoDB on your computer. After completing this installation, we open the git terminal. We write the following expression `git clone https://github.com/Kodluyoruz-NodeJs-Bootcamp/week2-mehtapugur` and press the enter button. After opening the downloaded project in the code editor, we write this command `npm install` on the command line. And after that we write `npm start`. Then open `http://localhost:3000/` on your browser<br/><br/>
