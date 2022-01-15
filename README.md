@@ -1,4 +1,4 @@
-### :gem: Kullanıcı Kayıt Uygulaması İsterleri: 
+### :gem: Kullanıcı Kayıt Uygulaması İsterleri: :gem: 
  
   - Kullanıcının adı, soyadı, kullanıcı adı ve şifre bilgileri alınacak. :heavy_check_mark:
   	- User model oluşturuldu.
@@ -38,10 +38,9 @@ CSS and Bootstrap were used for styling.
 
 ## :camera_flash: Screenshots
 
-| Start | Finish | 
+| Register | Login | 
 | --- | --- |
-| <img src="https://user-images.githubusercontent.com/24686636/147887007-5bfa427b-a168-4190-a432-636eb7b52ec3.png"> | <img src="https://user-images.githubusercontent.com/24686636/147887046-46e0c707-5e0a-4866-ad45-5ca08b6fa305.png"> |
-<hr/>
+| <img src="https://user-images.githubusercontent.com/24686636/149600366-5a7828e7-58ef-4125-94fd-ee754cfa6ef6.png"> | <img src="https://user-images.githubusercontent.com/24686636/149600374-165951d6-c1d4-4068-8235-e28650097575.png"> |
 
 ## :computer: Setup
   
