@@ -38,10 +38,6 @@ CSS and Bootstrap were used for styling.
 
 ## :camera_flash: Screenshots
 
-| Register | Login | 
-| --- | --- |
-| <img src="https://user-images.githubusercontent.com/24686636/149600366-5a7828e7-58ef-4125-94fd-ee754cfa6ef6.png"> | <img src="https://user-images.githubusercontent.com/24686636/149600374-165951d6-c1d4-4068-8235-e28650097575.png"> |
-
 | Register |
 | --- |
 | <img src="https://user-images.githubusercontent.com/24686636/149600366-5a7828e7-58ef-4125-94fd-ee754cfa6ef6.png"> |
@@ -58,6 +54,9 @@ CSS and Bootstrap were used for styling.
 | --- | --- |
 | <img src="https://user-images.githubusercontent.com/24686636/149600682-e72ada7d-a99c-4949-9f51-3df75573a47a.png"> | <img src="https://user-images.githubusercontent.com/24686636/149600686-75539306-bd10-4dc2-9b2a-e932d24c560a.png"> |
 
+| Token | 
+| --- |
+| <img src="https://user-images.githubusercontent.com/24686636/149600789-13cb185a-b7b9-4bff-8669-50466c89c993.png"> |
 
 
 
