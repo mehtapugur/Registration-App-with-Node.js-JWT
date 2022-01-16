@@ -1,14 +1,3 @@
-### :gem: Kullanıcı Kayıt Uygulaması İsterleri: :gem: 
- 
-  - Kullanıcının adı, soyadı, kullanıcı adı ve şifre bilgileri alınacak. :heavy_check_mark:
-  - Kullanıcılar register olacak, register olan kullanıcılar mongodb de tutulacak. :heavy_check_mark:
-  - Kayıtlı olan kullanıcı login olabilecek. :heavy_check_mark:
-  - Login olan kullanıcının login olduğu browser bilgisi sessionda tutulacak ve kullanıcıya jwt token return edilecek. :heavy_check_mark:
-  - Kullanıcının authni hem jwt tokendan hemde sessiondan aynı browser üzerinden mi geldi diye kontrol edilecek. :heavy_check_mark:
-  - Sonrasında yapmak istediği işlemler için bu kontrolleri geçmesi gerekecek. :heavy_check_mark:
-  - Kullanıcılar listelenecek :heavy_check_mark:
-<hr>
-
 ## :calling: About
 A website where registered users can log in. In this application, registration and login processes were made using various verification methods like JWT, Session, Cookie.
 
