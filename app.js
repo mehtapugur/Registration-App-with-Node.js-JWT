@@ -1,7 +1,3 @@
-// Gusto & RemoteTeam Node.js Bootcamp
-// Assignment #2 for Week #3
-// Mehtap Ugur
-
 //Require modules
 const express = require("express");
 const bodyParser = require("body-parser");
