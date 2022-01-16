@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const Schema = mongoose.Schema;
 
+//create User model for users to register
 const UserSchema = new Schema({
   name: {
     type: String,
@@ -25,13 +26,9 @@ const UserSchema = new Schema({
     type: String,
     require: true,
   },
-  /*role: {
-    type: String,
-    enum: ["student", "teacher", "admin"],
-    default: "student",
-  }, */
 });
 
+//save the user password to the database by encrypting it for security
 UserSchema.pre("save", function (next) {
   const user = this;
   bcrypt.hash(user.password, 10, (error, hash) => {
@@ -40,6 +37,7 @@ UserSchema.pre("save", function (next) {
   });
 });
 
+//keep user information in database
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;

@@ -2,17 +2,21 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 
 module.exports = (req, res, next) => {
+  //get token from cookie
   const token = req.cookies.token;
 
+  //verify token
   jwt.verify(token, req.app.get("api_secret_key"), (err, decoded) => {
     if (err) return next();
-    req.userId = decoded.id; //? userID olsa çalışır mı
-    req.browserInfo = decoded.browserInfo;
+
+    req.user_id = decoded.id;
+    req.browserInfo = decoded.browserInfo; //browser information
   });
 
+  //compare browser information and ID's
   if (
     !(
-      req.userId == req.session.userID &&
+      req.user_id == req.session.userID &&
       req.headers["user-agent"] == req.session.browserInfo &&
       req.headers["user-agent"] == req.browserInfo
     )
@@ -21,15 +25,3 @@ module.exports = (req, res, next) => {
 
   next();
 };
-
-/* önceki hali
-const User = require("../models/User");
-
-module.exports = (req, res, next) => {
-  User.findById(req.session.userID, (err, user) => {
-    if (err || !user) return res.redirect("/login");
-    next();
-  });
-};
-
-*/

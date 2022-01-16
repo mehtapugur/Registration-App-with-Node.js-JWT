@@ -1,4 +1,8 @@
-// Gerekli modüller require edilir
+// Gusto & RemoteTeam Node.js Bootcamp
+// Assignment #2 for Week #3
+// Mehtap Ugur
+
+//Require modules
 const express = require("express");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -10,15 +14,17 @@ const multer = require("multer"); //?
 const pageRoute = require("./routes/pageRoute");
 const userRoute = require("./routes/userRoute");
 
-//express fonksiyonunu çalıştırıyoruz
+//start express module
 const app = express();
 
+//give error
 process.on("uncaughtException", (err) => {
   console.log("UNCAUGHT EXCEPTION, APP SHUTTING NOW!!");
   console.log(err.message, err.name);
   process.exit(1);
 });
 
+//Connect DB
 mongoose
   .connect("mongodb://localhost/assignment-two-db", {
     useNewUrlParser: true,
@@ -32,7 +38,7 @@ mongoose
 //Template Engine
 app.set("view engine", "ejs");
 
-//global değişken
+//global variable
 global.userIN = null;
 
 //Middlewares
@@ -43,6 +49,7 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 app.set("api_secret_key", require("./config").api_secret_key);
 app.use(cookieParser());
 
+//Session
 app.use(
   session({
     secret: "api_secret_key",
@@ -69,6 +76,7 @@ app.use("*", (req, res, next) => {
   next();
 });
 
+//Routing
 app.use("/", pageRoute);
 app.use("/users", userRoute);
 

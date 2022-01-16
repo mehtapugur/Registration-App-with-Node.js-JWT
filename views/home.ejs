@@ -14,15 +14,15 @@
           <div class="table-container">
             <table class="table">
               <thead class="table__thead">
-                <tr>
+                <opttr>
                   <th class="table__th">Name</th>
                   <th class="table__th">Username</th>
                   <th class="table__th">Email</th>
-                </tr>
+                </opttr>
               </thead>
               <tbody class="table__tbody">
                 <% for(let i=0; i < users.length; i++) { %>
-                  <tr class="table-row table-row--chris">
+                  <tr class="table-row">
                     <td class="table-row__td">
                       <div class="table-row__info">
                         <p class="table-row__name">
@@ -33,13 +33,13 @@
                     </td>
                     <td data-column="Username" class="table-row__td">
                       <div class="">
-                        <p class="table-row__policy">
+                        <p class="table-row__username">
                           <%= users[i].username %>
                         </p>
                       </div>
                     </td>
                     <td data-column="Email" class="table-row__td">
-                      <p class="table-row__p-status status--green status">
+                      <p class="table-row__p-email">
                         <%= users[i].email %>
                       </p>
                     </td>
